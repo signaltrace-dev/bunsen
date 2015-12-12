@@ -1,0 +1,44 @@
+.chosen-no-bg-borders{
+  box-shadow: none;
+  border: none;
+  background-image: none;
+}
+
+.chosen-container.form-control{
+  height: auto;
+}
+
+.chosen-container{
+  width: 75% !important;
+  .chosen-single{
+    .chosen-no-bg-borders;
+  }
+
+
+  .chosen-choices{
+    padding: 6px;
+    .chosen-no-bg-borders;
+
+    li.search-field{
+      width:100%;
+    }
+
+    li.search-choice{
+      .chosen-no-bg-borders;
+      @btn-background: lighten(@brand-primary, 15%);
+      background: @btn-background;
+      //background: @brand-secondary;
+      color:#fff;
+      line-height: 20px;
+      span{
+        padding:5px;
+      }
+
+      .search-choice-close{
+
+      }
+    }
+  }
+}
+
+//.chosen-container-active{} .chosen-choices
