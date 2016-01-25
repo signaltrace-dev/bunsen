@@ -85,7 +85,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="/"><i class="fa fa-home"></i></a>
+            <a class="navbar-brand page-scroll" href="/">
+              <?php if(!empty($logo)): ?>
+                <img src="<?php echo $logo; ?>"/>
+              <?php else: ?>
+                <i class="fa fa-home"></i>
+              <?php endif; ?>
+            </a>
         </div>
 
         <?php if (!empty($main_menu) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
@@ -93,7 +99,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <?php if (!empty($primary_nav)): ?>
-            <?php print drupal_render($primary_nav); ?>
+            <span class="primary-nav">
+              <?php print drupal_render($primary_nav); ?>
+            </span>
           <?php endif; ?>
           <?php if (!empty($secondary_nav)): ?>
             <?php print drupal_render($secondary_nav); ?>
@@ -108,18 +116,10 @@
 
 <!-- Header -->
 <?php if (drupal_is_front_page()) : ?>
-  <?php if(!empty($logo)){
-    $logo_style = 'style="background-image:url(' . $logo . ')"';
-  }
-  ?>
-
-  <header <?php print $logo_style; ?>>
+  <header>
       <div class="container">
           <div class="intro-text">
-              <div class="intro-lead-in"><?php print $site_name; ?></div>
-              <?php if (!empty($site_slogan)): ?>
-                <div class="intro-heading"><?php print $site_slogan; ?></div>
-              <?php endif; ?>
+              <div class="intro-lead-in"><?php print $site_slogan; ?></div>
           </div>
       </div>
   </header>
@@ -150,6 +150,7 @@
 <footer>
     <div class="container">
         <div class="row">
+            <span class="copyright"><?php echo date("Y"); ?> ResearchPipe.com</span>
             <?php print render($page['footer']); ?>
         </div>
     </div>
