@@ -7564,7 +7564,7 @@ table .checkbox input[type="checkbox"] {
 }
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 .main-container {
   width: 100%;
@@ -7890,7 +7890,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .primary-nav .navbar-nav .last {
   border-radius: 0;
   color: white;
-  background-color: #f4364c;
+  background-color: #41b53e;
 }
 .navbar-default .primary-nav .navbar-nav .last a {
   color: white;
@@ -8487,7 +8487,7 @@ section#block-system-main {
   clear: both;
   font-family: 'Open Sans', Arial, sans-serif;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   overflow: hidden;
 }
 .view-platform .item-platform-overview .term-title {
@@ -8507,6 +8507,17 @@ section#block-system-main {
 .view-platform .item-platform-overview .col-img {
   padding-top: 10px;
   padding-bottom: 10px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .view-platform .item-platform-overview .col-img {
+    text-align: center;
+    width: 100%;
+  }
+  .view-platform .item-platform-overview .col-img img {
+    clear: both;
+    margin: 0 auto;
+  }
 }
 .view-platform .item-platform-overview .col-img img {
   float: left;
@@ -8522,8 +8533,13 @@ section#block-system-main {
 }
 .view-platform .item-platform-overview.views-row-even .term-title,
 .view-platform .item-platform-overview.views-row-even .term-description {
+  overflow: hidden;
   margin-right: 20px;
   margin-left: 0;
+}
+.view-platform .item-platform-overview.views-row-even .term-title ul,
+.view-platform .item-platform-overview.views-row-even .term-description ul {
+  text-align: left;
 }
 .view-platform .item-platform-overview.views-row-even .col-img {
   float: right;
@@ -8535,6 +8551,52 @@ section#block-system-main {
   padding-right: 10%;
   padding-top: 30px;
   border-top: 1px solid #dadada;
+}
+.block-front.block-new-old {
+  background: #F9F9FA;
+}
+.block-front.block-new-old .pnl-pane {
+  width: 50%;
+  float: left;
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  .block-front.block-new-old .pnl-pane {
+    width: 100%;
+    clear: both;
+    display: block;
+    margin: 20px auto;
+  }
+}
+.block-front.block-new-old .pnl-pane.pnl-old-way {
+  border-right: 1px solid #dadada;
+  padding-right: 2%;
+}
+@media screen and (max-width: 768px) {
+  .block-front.block-new-old .pnl-pane.pnl-old-way {
+    border: none;
+    padding: 0;
+  }
+}
+.block-front.block-new-old .pnl-pane.pnl-new-way {
+  padding-left: 2%;
+}
+@media screen and (max-width: 768px) {
+  .block-front.block-new-old .pnl-pane.pnl-new-way {
+    border: none;
+    padding: 0;
+  }
+}
+.block-front.block-new-old .pnl-pane.pnl-new-way .pnl-header {
+  color: #3EB33B;
+}
+.block-front.block-new-old .pnl-pane img {
+  width: 100%;
+}
+.block-front.block-new-old .pnl-pane .pnl-header {
+  font-size: 20px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 0 auto 45px;
 }
 .block-front.block-orgs {
   border: none;
@@ -8558,11 +8620,30 @@ section#block-system-main {
 }
 .view-deployment .item-deployment-option {
   display: inline-block;
-  width: 25%;
+  position: relative;
+  width: 35%;
+  border: 2px solid #368DDB;
+  padding: 50px 40px;
+  margin: 20px 2% 0 2%;
+}
+.view-deployment .item-deployment-option:first-child .item-image img {
+  margin-top: 10px;
 }
 .view-deployment .item-deployment-option .item-image {
-  min-height: 68px;
   display: inline-block;
+  position: absolute;
+  top: -48px;
+  left: 38%;
+  z-index: 999;
+  border: 2px solid #368DDB;
+  background: #fff;
+  padding: 10px;
+  border-radius: 100px;
+  width: 95px;
+  height: 95px;
+}
+.view-deployment .item-deployment-option .item-image img {
+  margin: 0 auto;
 }
 .view-deployment .item-deployment-option .term-title {
   font-size: 20px;
@@ -8570,6 +8651,25 @@ section#block-system-main {
 }
 .view-deployment .item-deployment-option ul {
   text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .block-front .view-content .org-item,
+  .block-front .view-content .item {
+    width: 100% !important;
+    margin: 10px auto;
+  }
+  .block-front .view-content .org-item.item-deployment-option,
+  .block-front .view-content .item.item-deployment-option {
+    margin: 20px auto 35px auto;
+  }
+  .block-front .view-content .org-item.org-item,
+  .block-front .view-content .item.org-item {
+    text-align: center;
+  }
+  .block-front .view-content .org-item.org-item img,
+  .block-front .view-content .item.org-item img {
+    margin: 0 auto;
+  }
 }
 .view-features {
   text-align: left;
@@ -8582,6 +8682,7 @@ section#block-system-main {
   display: inline-block;
   padding: 0 2%;
   vertical-align: top;
+  margin-bottom: 30px;
 }
 .view-features .item-feature p {
   font-size: inherit;
@@ -8595,6 +8696,11 @@ section#block-system-main {
   min-height: 200px;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .view-features .item-feature.row {
+    max-height: none;
+  }
+}
 .view-features .item-feature .item-image {
   font-size: 25px;
   color: #257ABB;
@@ -8605,6 +8711,7 @@ section#block-system-main {
 .view-features .item-feature .term-title {
   font-size: 16px;
   font-weight: bold;
+  line-height: 30px;
 }
 .region-footer {
   float: left;
@@ -8613,6 +8720,49 @@ section#block-system-main {
 .region-footer p {
   font-size: inherit;
   line-height: inherit;
+}
+.page-node .content {
+  text-align: center;
+  margin: 0 auto;
+  width: 40%;
+}
+.page-node .content p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.page-node .content form {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .page-node .content form {
+    width: 90%;
+    padding: 0 2%;
+  }
+}
+.page-node .content form .form-control {
+  float: left;
+  width: 75%;
+}
+.page-node .content form label {
+  width: 20%;
+  float: left;
+}
+#platform {
+  overflow: hidden;
+  top: 0;
+  position: absolute;
+}
+.block-try-free {
+  padding: 20px 0 40px 0;
+}
+.block-try-free .btn {
+  color: #fff;
+  background-color: #41b53e;
+  font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 .chosen-no-bg-borders {
   box-shadow: none;
