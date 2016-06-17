@@ -1,0 +1,86 @@
+.field-name-field-times{
+  .field-item{
+    display: inline;
+  }
+}
+
+.date-group{
+  display: inline-block;
+  overflow: hidden;
+  width: 45%;
+  max-width: 330px;
+  padding: 20px;
+
+  .times{
+    font-size: 12px;
+    padding: 0;
+    margin: 10px 0 0 0;
+    .time-divider{
+      padding:0 2px;
+    }
+    li{
+      list-style-position: inside;
+    }
+  }
+
+  .date-cal{
+    width: 130px;
+    height: 120px;
+    display: inline-block;
+    float: left;
+
+    .month{
+      display: block;
+      background: #B1BACC;
+      padding: 10px 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .date{
+      background: #E6E9EF;
+      display: block;
+      height: 65%;
+      vertical-align: middle;
+      line-height: 70px;
+      font-size: 70px;
+      font-weight: bold;
+    }
+  }
+
+  .date-display {
+      //float: left;
+      display: inline-block;
+  }
+
+  .date-label{
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .date-times{
+  }
+}
+
+@media screen and (max-width: 768px){
+  .field-name-field-times{
+    .field-item{
+      display: block;
+    }
+  }
+  .date-group{
+    width: 100%;
+    text-align: center;
+    .date-cal{
+      float:none;
+      display: block;
+      margin: 0 auto;
+    }
+    .date-display{
+      float:none;
+      display: block;
+      margin: 0 auto;
+
+    }
+  }
+}

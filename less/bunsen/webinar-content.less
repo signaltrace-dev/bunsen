@@ -1,0 +1,42 @@
+.node-type-webinar{
+  counter-reset: item;
+
+  .content-page{
+    width: 100%;
+  }
+
+  .field-name-field-times{
+    background: #f2f4f7;
+  }
+
+  .field-name-body{
+    width: 75%;
+    margin: 0 auto;
+    ol {
+      list-style: none;
+      li {
+        padding: 10px;
+        margin: 10px 0;
+        text-align: left;
+        counter-increment: item;
+        margin-bottom: 5px;
+      }
+      li:before {
+        margin-right: 10px;
+        content: counter(item);
+        background: #468ec2;
+        border-radius: 100%;
+        color: white;
+        width: 1.5em;
+        height: 1.5em;
+        text-align: center;
+        display: inline-block;
+        font-size: 1.1em;
+        float: left;
+      }
+
+    }
+  }
+
+
+}
