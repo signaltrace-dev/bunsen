@@ -30,4 +30,5 @@ stylesheets[all][] = fonts/font-awesome/css/font-awesome.min.css
 ; ;;;;;;;;;;;;;;;;;;;;;
 ;
 scripts[] = 'js/d7_theme_bunsen.min.js'
+scripts[] = 'js/vendor/activecampaign.js'
 settings[bootstrap_cdn] = ''
