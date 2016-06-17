@@ -15,4 +15,11 @@ function bunsen_preprocess_page(&$variables){
     // Provide default theme wrapper function.
     $variables['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
   }
+
+  if (drupal_is_front_page()){
+    $variables['content_column_class'] = 'col-lg-12 text-center';
+  }
+  else{
+    $variables['content_column_class'] = 'col-lg-12 content-page';
+  }
 }
