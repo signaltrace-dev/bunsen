@@ -7987,10 +7987,11 @@ header .intro-text .intro-heading {
     margin-bottom: 50px;
   }
 }
-section h2.section-heading {
+h2.section-heading {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
+  text-align: center;
 }
 section h3.section-subheading {
   font-size: 16px;
@@ -8442,9 +8443,8 @@ body {
   webkit-tap-highlight-color: #41b53e;
 }
 section#block-system-main {
-  margin: 50px 0;
-  padding: 20px 0 0 0;
   min-height: 400px;
+  margin-bottom: 50px;
 }
 .front .region-content section#block-system-main {
   margin: 0;
@@ -8724,7 +8724,6 @@ section#block-system-main {
 .page-node .content {
   text-align: center;
   margin: 0 auto;
-  width: 40%;
 }
 .page-node .content p {
   text-align: left;
@@ -8763,6 +8762,135 @@ section#block-system-main {
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 1px;
+}
+.content-page {
+  margin-top: 80px;
+  float: none;
+  width: 75%;
+  margin: 80px auto 0 auto;
+  padding-top: 20px;
+}
+.pnl-login-wrapper {
+  float: none;
+  text-align: center;
+  margin: 0 auto;
+}
+.pnl-login-wrapper .form-required {
+  display: none;
+}
+.pnl-login-wrapper .pnl-login .form-group label {
+  padding-left: 0;
+  padding-right: 0;
+}
+.pnl-login-wrapper .form-control {
+  display: inline-block;
+  width: 75%;
+}
+.node-type-webinar {
+  counter-reset: item;
+}
+.node-type-webinar .content-page {
+  width: 100%;
+}
+.node-type-webinar .field-name-field-times {
+  background: #f2f4f7;
+}
+.node-type-webinar .field-name-body {
+  width: 75%;
+  margin: 0 auto;
+}
+.node-type-webinar .field-name-body ol {
+  list-style: none;
+}
+.node-type-webinar .field-name-body ol li {
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+.node-type-webinar .field-name-body ol li:before {
+  margin-right: 10px;
+  content: counter(item);
+  background: #468ec2;
+  border-radius: 100%;
+  color: white;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.1em;
+  float: left;
+}
+.field-name-field-times .field-item {
+  display: inline;
+}
+.date-group {
+  display: inline-block;
+  overflow: hidden;
+  width: 45%;
+  max-width: 330px;
+  padding: 20px;
+}
+.date-group .times {
+  font-size: 12px;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+.date-group .times .time-divider {
+  padding: 0 2px;
+}
+.date-group .times li {
+  list-style-position: inside;
+}
+.date-group .date-cal {
+  width: 130px;
+  height: 120px;
+  display: inline-block;
+  float: left;
+}
+.date-group .date-cal .month {
+  display: block;
+  background: #B1BACC;
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+.date-group .date-cal .date {
+  background: #E6E9EF;
+  display: block;
+  height: 65%;
+  vertical-align: middle;
+  line-height: 70px;
+  font-size: 70px;
+  font-weight: bold;
+}
+.date-group .date-display {
+  display: inline-block;
+}
+.date-group .date-label {
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .field-name-field-times .field-item {
+    display: block;
+  }
+  .date-group {
+    width: 100%;
+    text-align: center;
+  }
+  .date-group .date-cal {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  .date-group .date-display {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
 }
 .chosen-no-bg-borders {
   box-shadow: none;
