@@ -118,3 +118,14 @@ function bunsen_preprocess_bootstrap_panel(&$variables) {
     $variables['target'] = '#' . $element['#id'] . ' > .collapse';
   }
 }
+
+function bunsen_theme(){
+  $items = array();
+
+  $items['user_login'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'bunsen') . '/templates',
+    'template' => 'user-login',
+  );
+  return $items;
+}
