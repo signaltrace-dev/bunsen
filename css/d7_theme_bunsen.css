@@ -8446,6 +8446,11 @@ section#block-system-main {
   min-height: 400px;
   margin-bottom: 50px;
 }
+.front .anchor {
+  display: block;
+  position: relative;
+  top: -175px;
+}
 .front .region-content section#block-system-main {
   margin: 0;
   padding: 0;
