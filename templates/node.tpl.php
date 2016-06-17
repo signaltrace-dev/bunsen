@@ -82,16 +82,6 @@
 ?>
 <section id="node-content">
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <?php //print $user_picture; ?>
-
-  <?php print render($title_prefix); ?>
-  <?php if (!empty($title) && !drupal_is_front_page()): ?>
-    <h2 class="section-heading"><?php print $title; ?></h2>
-  <?php endif; ?>
-
-  <?php print render($title_suffix); ?>
-
   <?php if ($display_submitted): ?>
     <div class="submitted">
       <?php print $submitted; ?>
