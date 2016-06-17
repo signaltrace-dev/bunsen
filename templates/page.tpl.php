@@ -140,7 +140,7 @@
 
   <div class="main-container container">
     <div class="row">
-      <div class="col-lg-12 text-center <?php print $content_column_class; ?>">
+      <div class="<?php print $content_column_class; ?>">      
         <?php print render($title_prefix); ?>
         <?php if (!empty($title) && !drupal_is_front_page()): ?>
           <h2 class="section-heading"><?php print $title; ?></h2>
