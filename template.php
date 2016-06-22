@@ -96,29 +96,6 @@ function bunsen_field_group_pre_render_alter(&$element, $group, &$form) {
   }
 }
 
-/*
- * Implements of hook_js_alter
- */
-function bunsen_js_alter(&$js) {
-  unset($js['misc/collapse.js']);
-}
-
-function bunsen_preprocess_bootstrap_panel(&$variables) {
-  $element = &$variables['element'];
-  $attributes = &$variables['attributes'];
-  if($element['#collapsible'] != $variables['collapsible']){
-    $variables['collapsible'] = TRUE;
-    $variables['collapsed'] = TRUE;
-
-    if (!isset($element['#id'])) {
-      $element['#id'] = drupal_html_id('bootstrap-panel');
-    }
-
-    $attributes['id'] = $element['#id'];
-    $variables['target'] = '#' . $element['#id'] . ' > .collapse';
-  }
-}
-
 function bunsen_theme(){
   $items = array();
 
