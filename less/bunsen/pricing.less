@@ -1,44 +1,58 @@
 .table--pricing{
   margin-top: 30px;
-  fieldset{
-    //margin-left: -20px;
+  .accordion{
     margin-bottom: 0;
     border: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    a{
-      &:hover, &:active, &:visited, &:link {
-        text-decoration:none;
+
+    .ui-accordion-header{
+      font-size: 15px;
+      .ui-accordion-header-icon{
+        display: none;
+      }
+      &.ui-state-active{
+        &:after{
+          content: "\f0de";
+          top: 5px;
+        }
       }
       &:after{
         font-family: FontAwesome;
         font-size: 18px;
         margin-left: 10px;
-        content: "\f0de";
-        top: 5px;
+
         position: relative;
+        content: "\f0dd";
+        top: -3px;
       }
+    }
+    a{
+      &:hover, &:active, &:visited, &:link {
+        text-decoration:none;
+      }
+
     }
     &.collapsed{
       a{
-          &:after{
-            content: "\f0dd";
-            top: -3px;
-          }
+
       }
     }
-    .panel-body{
+    .ui-accordion-content{
       font-size: 12px;
+      margin-bottom: 0;
+      border: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
     }
   }
-  legend{
-    &.panel-heading{
+  .title{
       background: none;
       background-color: inherit;
       border: none;
       padding: 0;
-    }
   }
   thead{
     tr{
