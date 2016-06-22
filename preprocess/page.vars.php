@@ -1,11 +1,7 @@
 <?php
 
 function bunsen_preprocess_page(&$variables){
-  /*
-  $main_menu = menu_tree_all_data('menu-contributions-and-data');
-  $output = menu_tree_output($main_menu);
-  $output['#theme_wrappers'][0] = 'menu_tree__primary';
-  $vars['main_menu'] = $output;*/
+  drupal_add_library('system','ui.accordion');
 
   // Primary nav.
   $variables['primary_nav'] = FALSE;
