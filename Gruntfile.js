@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       js: {
         // the files to concatenate
         src: [
-          'node_modules/bootstrap/dist/js/**/*.js',
+          //'node_modules/bootstrap/dist/js/**/*.js',
           'js/src/**/*.js'
         ],
         // the location of the resulting JS file
