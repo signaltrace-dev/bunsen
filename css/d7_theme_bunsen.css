@@ -8794,35 +8794,46 @@ section#block-system-main {
 .table--pricing {
   margin-top: 30px;
 }
-.table--pricing fieldset {
+.table--pricing .accordion {
   margin-bottom: 0;
   border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.table--pricing fieldset a:hover,
-.table--pricing fieldset a:active,
-.table--pricing fieldset a:visited,
-.table--pricing fieldset a:link {
-  text-decoration: none;
+.table--pricing .accordion .ui-accordion-header {
+  font-size: 15px;
 }
-.table--pricing fieldset a:after {
+.table--pricing .accordion .ui-accordion-header .ui-accordion-header-icon {
+  display: none;
+}
+.table--pricing .accordion .ui-accordion-header.ui-state-active:after {
+  content: "\f0de";
+  top: 5px;
+}
+.table--pricing .accordion .ui-accordion-header:after {
   font-family: FontAwesome;
   font-size: 18px;
   margin-left: 10px;
-  content: "\f0de";
-  top: 5px;
   position: relative;
-}
-.table--pricing fieldset.collapsed a:after {
   content: "\f0dd";
   top: -3px;
 }
-.table--pricing fieldset .panel-body {
-  font-size: 12px;
+.table--pricing .accordion a:hover,
+.table--pricing .accordion a:active,
+.table--pricing .accordion a:visited,
+.table--pricing .accordion a:link {
+  text-decoration: none;
 }
-.table--pricing legend.panel-heading {
+.table--pricing .accordion .ui-accordion-content {
+  font-size: 12px;
+  margin-bottom: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.table--pricing .title {
   background: none;
   background-color: inherit;
   border: none;
