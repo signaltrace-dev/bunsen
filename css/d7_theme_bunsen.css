@@ -8740,8 +8740,8 @@ section#block-system-main {
 }
 @media screen and (max-width: 768px) {
   .page-node .content form {
-    width: 90%;
-    padding: 0 2%;
+    /*width: 90%;
+				padding: 0 2%;*/
   }
 }
 .page-node .content form .form-control {
@@ -8790,6 +8790,81 @@ section#block-system-main {
 .pnl-login-wrapper .form-control {
   display: inline-block;
   width: 75%;
+}
+.table--pricing {
+  margin-top: 30px;
+}
+.table--pricing fieldset {
+  margin-bottom: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.table--pricing fieldset a:hover,
+.table--pricing fieldset a:active,
+.table--pricing fieldset a:visited,
+.table--pricing fieldset a:link {
+  text-decoration: none;
+}
+.table--pricing fieldset a:after {
+  font-family: FontAwesome;
+  font-size: 18px;
+  margin-left: 10px;
+  content: "\f0de";
+  top: 5px;
+  position: relative;
+}
+.table--pricing fieldset.collapsed a:after {
+  content: "\f0dd";
+  top: -3px;
+}
+.table--pricing fieldset .panel-body {
+  font-size: 12px;
+}
+.table--pricing legend.panel-heading {
+  background: none;
+  background-color: inherit;
+  border: none;
+  padding: 0;
+}
+.table--pricing thead tr th {
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 2px solid #f3f3f3;
+}
+.table--pricing td {
+  font-size: 16px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.table--pricing td.section {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  padding-top: 30px;
+}
+.table--pricing td.section.first {
+  padding-top: 10px;
+}
+.table--pricing td.feature {
+  max-width: 250px;
+  text-align: left;
+  font-size: 15px;
+  padding: 12px;
+  padding-left: 20px;
+}
+.table--pricing td i {
+  font-size: 20px;
+}
+.table--pricing td i.selected {
+  color: #41b53e;
+}
+.table--pricing td i.unselected {
+  color: red;
+}
+.table--pricing td .price-amount {
+  font-weight: bold;
+  font-size: 18px;
 }
 .node-type-webinar {
   counter-reset: item;

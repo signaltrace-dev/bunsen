@@ -1,0 +1,87 @@
+.table--pricing{
+  margin-top: 30px;
+  fieldset{
+    //margin-left: -20px;
+    margin-bottom: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    a{
+      &:hover, &:active, &:visited, &:link {
+        text-decoration:none;
+      }
+      &:after{
+        font-family: FontAwesome;
+        font-size: 18px;
+        margin-left: 10px;
+        content: "\f0de";
+        top: 5px;
+        position: relative;
+      }
+    }
+    &.collapsed{
+      a{
+          &:after{
+            content: "\f0dd";
+            top: -3px;
+          }
+      }
+    }
+    .panel-body{
+      font-size: 12px;
+    }
+  }
+  legend{
+    &.panel-heading{
+      background: none;
+      background-color: inherit;
+      border: none;
+      padding: 0;
+    }
+  }
+  thead{
+    tr{
+      th{
+        text-align: center;
+        font-size: 16px;
+        border-bottom: 2px solid #f3f3f3;
+      }
+    }
+  }
+
+  td{
+    font-size: 16px;
+    border-bottom: 1px solid #f3f3f3;
+
+    &.section{
+      font-weight: bold;
+      font-size: 18px;
+      text-align: left;
+      padding-top: 30px;
+      &.first{
+        padding-top: 10px;
+      }
+    }
+    &.feature{
+      max-width: 250px;
+      text-align: left;
+      font-size: 15px;
+      padding: 12px;
+      padding-left: 20px;
+    }
+    i{
+      font-size: 20px;
+      &.selected{
+        color: #41b53e;
+      }
+      &.unselected{
+        color: red;
+      }
+    }
+    .price-amount{
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}

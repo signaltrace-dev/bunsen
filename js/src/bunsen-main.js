@@ -3,7 +3,6 @@
     attach: function (context, settings) {
       $(document).ready(function(){
         var bunsenMain = this;
-
       });
     }
   };

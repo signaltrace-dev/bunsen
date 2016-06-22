@@ -2387,7 +2387,6 @@ require('../../js/affix.js')
     attach: function (context, settings) {
       $(document).ready(function(){
         var bunsenMain = this;
-
       });
     }
   };
